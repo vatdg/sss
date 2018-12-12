@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The Ones Where...</title>
+    <meta charset="utf-8">
+    <link href="/style.css" rel="stylesheet" type="text/css">
+    <script language="javascript" type="text/javascript" src="/sketch.js"></script>
+    <script language="javascript" type="text/javascript" src="/p5.js"></script>
+    <script language="javascript" src="/p5.dom.js"></script>
+  </head>
+  
+  <body>
+<!-- SENTENCE + SELECT BOXES -->
+    <div id="sentence">
+      The ones where
+      <select id="character" name="character" onchange="populate(this.id,'lesson')">
+        <option value=""></option>
+        <option value="Phoebe">Phoebe</option>
+        <option value="Chandler">Chandler</option>
+        <option value="Rachel">Rachel</option>
+        <option value="Ross">Ross</option>
+        <option value="Monica">Monica</option>
+        <option value="Joey">Joey</option>
+        <option value="FRIENDS">F.R.I.E.N.D.S.</option>
+      </select>
+      teaches us
+      <select id="lesson" name="lesson"></select>
+      .
+    </div>
+
+<!-- EPISODE TEXT -->
+<!-- PHOEBE -->
+<!-- 1. Phoebe teaches us to do things you love even if you're not the greatest at them. -->
+    <div class="episodes" id="ph-ep-1">
+      The Pilot <span class="symbols">⌇</span>
+      The One With The Baby On The Bus <span class="symbols">♫</span>
+      The One Where Eddie Moves In <span class="symbols">☀</span>
+      The One With The Cop <span class="symbols">◌</span>
+      The One Where Rosita Dies <span class="symbols">⌔</span>
+      The One With The Tea Leaves <span class="symbols">⍝</span>
+    </div>
+<!-- 2. Phoebe teaches us that you shouldn’t give a shit what people think about you. -->
+    <div class="episodes" id="ph-ep-2">
+      The One With Phoebe's Ex-Partner <span class="symbols">⍝</span>
+      The One With The Cat <span class="symbols">♫</span>
+      The One Where Phoebe Hates PBS <span class="symbols">◌</span>
+      The One Where Everybody Finds Out <span class="symbols">⌔</span>
+      The One Where Joey Loses His Insurance <span class="symbols">⌇</span>
+      The One Where Phoebe Runs <span class="symbols">☀</span>
+      The One With All The Cheesecakes <span class="symbols">⍝</span>
+      The One In Massapequa<span class="symbols">◌</span>
+      The One With The Sharks <span class="symbols">⌔</span>
+      The One Where Rachel Goes Back To Work <span class="symbols">☀</span>
+      The One With Phoebe's Rats <span class="symbols">♫</span>
+      The One With Ross's Tan <span class="symbols">⌇</span>
+      The One With Princess Consuela <span class="symbols">◌</span>
+    </div>
+<!-- 3. Phoebe teaches us that home is a state of mind, and you get to choose your family. -->
+    <div class="episodes" id="ph-ep-3">
+      The One With Two Parts, Part 1 <span class="symbols">♫</span>
+      The One With Phoebe's Husband <span class="symbols">◌</span>
+      The One With Phoebe's Dad <span class="symbols">⍝</span>
+      The One With The Bullies <span class="symbols">⌔</span>
+      The One With Frank Jr. <span class="symbols">☀</span>
+      The One With The Cat <span class="symbols">♫</span>
+      The One Hundredth <span class="symbols">⌇</span>
+      The One With Joey's Bag <span class="symbols">◌</span>
+      The One Where Chandler Can't Cry <span class="symbols">⌔</span>
+      The One With The Halloween Party <span class="symbols">◌</span>
+      The One With The Sharks <span class="symbols">☀</span>
+      The One With The Male Nanny <span class="symbols">⍝</span>
+      The One With The Mugging <span class="symbols">⌇</span>
+      The One With The Boob Job <span class="symbols">♫</span>
+      The One In Barbados, Part 1 <span class="symbols">◌</span>
+      The One With Phoebe's Wedding <span class="symbols">⌔</span>
+    </div>
+   
+<!-- CHANDLER -->
+<!-- 1. Chandler teaches us that you are not defined by your job. -->
+    <div class="episodes" id="ch-ep-1">
+      The One With The Ultimate Fighting Champion
+      The One With The Embryos
+      The One With Chandler's Work Laugh    
+      The One With Phoebe's Birthday Dinner
+      The One With Christmas In Tulsa
+      The One With The Home Study
+    </div>
+<!-- 2. Chandler teaches us that you don't have to be great at advice, just be there for friends. -->
+    <div class="episodes" id="ch-ep-2">
+      The One Where Joey Moves Out
+      The One Where Eddie Won't Go
+      The One In Vegas, Part 1
+      The One On The Last Night
+      The One With The Memorial Service
+      The One With The Fertility Test
+      The One With The Donor
+      The One Where Rachel's Sister Baby-Sits
+    </div>
+<!-- 3. Chandler teaches us that your past does not define you. -->
+    <div class="episodes" id="ch-ep-3">
+      The One With The Thumb
+      The One Where Nana Dies Twice 
+      The One With Mrs. Bing
+      The One After The Superbowl, Part 2
+      The One With The Race Car Bed
+      The One Without The Ski Trip
+      The One With The Hypnosis Tape
+      The One With All The Rugby
+      The One Where Ross Got High
+      The One Where Chandler Can't Cry
+      The One With The Nap Partners
+      The One Where Chandler Doesn't Like Dogs
+      The One With Chandler's Dad
+      The One With Monica And Chandler's Wedding, Part 1
+      The One Where Estelle Dies
+    </div>
+    
+<!-- RACHEL -->
+<!-- 1. Rachel teaches that it’s okay to be a little ~extra~. -->
+    <div class="episodes" id="ra-ep-1">
+      The One With The Blackout
+      The One With Ross' New Girlfriend
+      The One With The Jellyfish
+      The One With Rachel's Crush
+      The One With Rachel's New Dress
+      The One With The Yeti
+      The One With The Ball
+      The One With Rachel's Sister
+      The One With The Engagement Picture
+      The One With The Pediatrician
+      The One In Barbados, Part 2
+    </div>
+<!-- 2. Rachel teaches us that it’s never too late to grow up. -->
+    <div class="episodes" id="ra-ep-2">
+      The Pilot
+      The One With The Dozen Lasagnas
+      The One With The Evil Orthodontist
+      The One With Two Parties
+      The One Where They All Turn Thirty
+      The One With Rachel's Big Kiss
+      The One After "I Do"
+      The One With The Rumor
+      The One With The Baby Shower
+      The One Where Emma Cries
+      The One With Rachel's Other Sister
+      The One With The Cake
+      The One Where Rachel's Sister Baby-Sits
+    </div>
+<!-- 3. Rachel teaches us that if you work hard and you're confident, you can do anything. -->
+    <div class="episodes" id="ra-ep-3">
+      The One Where The Monkey Gets Away
+      The One With Barry & Mindy's Wedding
+      The One Where Rachel Quits
+      The One Where Chandler Can't Remember Which Sister
+      The One With The Dirty Girl
+      The One With Rachel's Inadvertent Kiss
+      The One Where Rachel Smokes
+      The One With Rachel's Assistant
+      The One With Monica And Chandler's Wedding, Part 2
+      The One After "I Do"
+      The One Where Rachel Tells...
+      The One With The Birthing Video
+      The One With The Baby Shower
+      The One Where Rachel Has A Baby, Part 1
+      The One Where No One Proposes
+      The One With Rachel's Other Sister
+      The One Where Rachel Goes Back To Work
+      The One Where Rachel's Sister Baby-Sits
+    </div>
+    
+<!-- ROSS -->
+<!-- 1. Ross teaches us that your relationships don't define you. -->
+    <div class="episodes" id="ro-ep-1">
+      The One With The Lesbian Wedding
+      The One With The Metaphorical Tunnel
+      The One With All The Jealousy
+      The One With The Girl From Poughkeepsie
+      The One After Ross Says Rachel
+      The One With The Kips
+      The One Where Ross Moves In
+      The One With All The Resolutions
+      The One With The Ride-Along
+      The One After Vegas
+      The One With Ross's Teeth
+      The One Where Ross Meets Elizabeth's Dad
+      The One With The Proposal, Part 1
+      The One With Ross's Step Forward
+      The One With The Sharks
+      The One With Rachel's Other Sister
+      The One Where Joey Speaks French
+    </div>
+<!-- 2. Ross teaches us that it’s okay to be dorky. -->
+    <div class="episodes" id="ro-ep-2">
+      The One With The Monkey
+      <br>
+      The One After The Superbowl, Part 1
+      <br>
+      The One With The Princess Leia Fantasy
+      <br>
+      The One Where No One's Ready
+      <br>
+      The One Where Chandler Crosses The Line
+      <br>
+      The One Where Ross Can't Flirt
+      <br>
+      The One With The Routine
+      <br>
+      The One With Ross's Library Book
+      <br>
+      The One With The Holiday Armadillo
+      <br>
+      The One With The Pediatrician
+      <br>
+      The One With The Male Nanny
+      <br>
+      The One With Ross's Inappropriate Song
+      <br>
+      The One With The Soap Opera Party
+      <br>
+      The One With Ross's Tan
+    </div>
+<!-- 3. Ross teaches us that persistence pays off. -->
+    <div class="episodes" id="ro-ep-3">
+      The One With The East German Laundry Detergent
+      <br>
+      The One Where Ross Finds Out
+      <br>
+      The One With The Prom Video
+      <br>
+      The One With The Morning After
+      <br>
+      The One With The Screamer
+      <br>
+      The One Where Everybody Finds Out
+      <br>
+      The One Where Paul's The Man
+      <br>
+      The One With The Videotape
+      <br>
+      The One With Rachel's Phone Number
+      <br>
+      The One Where The Stripper Cries
+    </div>
+    
+<!-- MONICA -->
+<!-- 1. Monica teaches us that it's okay to know you’re really good at stuff. -->
+    <div class="episodes" id="mo-ep-1">
+      The One With The Stoned Guy
+      The One With A Chick And A Duck
+      The One With The Cuffs
+      The One Where They're Going To Party
+      The One With Phoebe's Cookies
+      The One With All The Candy
+      The One With Rachel's Date
+      The One With The Cooking Class
+      The One Where Monica Sings
+      The One In Barbados, Part 2
+      The One With The Late Thanksgiving
+    </div>
+<!-- 2. Monica teaches us that your neuroses can be endearing. -->
+    <div class="episodes" id="mo-ep-2">
+      The One Where Underdog Gets Away
+      <br>
+      The One With The List
+      <br>
+      The One With The Chicken Pox
+      <br>
+      The One With The Jam
+      <br>
+      The One With The Dollhouse
+      <br>
+      The One With All The Rugby
+      <br>
+      The One With Ross's Denial
+      <br>
+      The One With The Routine
+      <br>
+      The One With All The Candy
+      <br>
+      The One With The Cheap Wedding Dress
+      <br>
+      The One With The Secret Closet
+      <br>
+      The One In Massapequa
+      <br>
+      The One With Phoebe's Birthday Dinner
+      <br>
+      The One In Barbados, Part 2
+    </div>
+<!-- 3. Monica teaches us that it's never too late to change who you are. -->
+    <div class="episodes" id="mo-ep-3">
+      The One With The Fake Monica
+      <br>
+      The One With The Ick Factor
+      <br>
+      The One Where Ross Finds Out
+      <br>
+      The One Where Monica & Richard Are Friends
+      <br>
+      The One With All The Kissing
+      <br>
+      The One With All The Thanksgivings
+      <br>
+      The One With The Nap Partners
+      <br>
+      The One With Christmas In Tulsa
+    </div>
+    
+<!-- JOEY -->
+<!-- 1. Joey taught us that traditional career paths aren’t for everyone. -->
+    <div class="episodes" id="jo-ep-1">
+      The One With The Butt
+      The One With The Breast Milk
+      The One With Russ
+      The One Where Rachel Quits
+      The One With Phoebe's Uterus
+      The One With Joey's Dirty Day
+      The One Where Rachel Smokes
+      The One With Joey's Big Break
+      The One With The Joke
+      The One With Unagi
+      The One With Mac And C.H.E.E.S.E.
+      The One With Joey's Award
+      The One With Joey's Interview
+      The One Where Rachel Goes Back To Work
+      The One With The Mugging
+      The One With Rachel's Dream
+      The One With The Soap Opera Party
+      The One Where The Stripper Cries
+      The One Where Joey Speaks French
+      The One Where Estelle Dies
+    </div>
+<!-- 2. Joey teaches us to always go for what you want. -->
+    <div class="episodes" id="jo-ep-2">
+      The One With The Boobies
+      <br>
+      The One Where Dr. Ramoray Dies
+      <br>
+      The One With The Worst Best Man Ever
+      <br>
+      The One With Ross's Wedding, Part 1
+      <br>
+      The One With Ross' Sandwich
+      <br>
+      The One With Joey's Bag
+      <br>
+      The One With The Girl Who Hits Joey
+      <br>
+      The One With Rachel's Inadvertent Kiss
+      <br>
+      The One In Vegas, Part 2
+      <br>
+      The One With Joey's Porsche
+      <br>
+      The One With Unagi
+      <br>
+      The One With The Engagement Picture
+      <br>
+      The One With The Stain
+      <br>
+      The One Where Joey Dates Rachel
+      <br>
+      The One Where Joey Tells Rachel
+      <br>
+      The One Where Emma Cries
+      <br>
+      The One With Phoebe's Rats
+      <br>
+      The One With The Fertility Test
+      <br>
+      The One After Joey And Rachel Kiss
+    </div>
+<!-- 3. Joey teaches us that it's okay to be curvy and love your body. -->
+    <div class="episodes" id="jo-ep-3">
+      The One With The Fake Party
+      <br>
+      The One With All The Thanksgivings
+      <br>
+      The One With Joey's Fridge
+      <br>
+      The One With The Rumor
+      <br>
+      The One With Phoebe's Birthday Dinner
+      <br>
+      The One With The Late Thanksgiving
+      <br>
+      The One With The Birth Mother
+    </div>
+    
+<!-- FRIENDS -->
+<!-- 1. F.R.I.E.N.D.S. teaches us that life is not always fair. -->
+    <div class="episodes" id="fr-ep-1">
+      The One With the Sonogram at the End
+      The One With George Stephanopoulos
+      The One Where Rachel Finds Out
+      The One With Five Steaks And An Eggplant
+      The One Where Ross & Rachel Take A Break
+      The One With The Tiny T-Shirt
+      The One With Ross's Thing
+      The One With Joey's New Girlfriend
+      The One With The Invitation
+      The One Where Ross Hugs Rachel
+      The One Where Ross Dates A Student
+      The One With The Proposal, Part 1
+      The One With Monica's Thunder
+      The One With Rachel's Book
+      The One Where They're Up All Night
+      The One With Joey's New Brain
+      The One With The Stripper
+      The One With Monica's Boots
+      The One Where Chandler Takes A Bath
+      The One Where Rachel Is Late
+      The One With The Lottery
+      The One With The Donor
+      The One Where Ross Is Fine
+      The One With The Home Study
+      The One With Princess Consuela
+    </div>
+<!-- 2. F.R.I.E.N.D.S. teaches us to never lose the kid inside. -->
+    <div class="episodes" id="fr-ep-2">
+      The One With Two Parts, Part 2
+      The One Where Ross And Rachel... You Know
+      The One Where Old Yeller Dies
+      The One With The Giant Poking Device
+      The One With The Football
+      The One With A Chick And A Duck
+      The One Where They're Going To Party
+      The One With All The Haste
+      The One With All The Wedding Dresses
+      The One With All The Cheesecakes
+      The One Where They All Turn Thirty
+      The One With The Truth About London
+      The One With Ross's Inappropriate Song
+      The One With The Blind Dates
+      The One With Princess Consuela
+    </div>
+<!-- 3. F.R.I.E.N.D.S. teaches us that life is better with great friends. -->
+    <div class="episodes" id="fr-ep-3">
+      The One With The Candy Hearts
+      The One With All The Poker
+      The One With The Birth
+      The One Where Heckles Dies
+      The One With The Flashback
+      The One Where Chandler Can't Remember Which Sister
+      The One At The Beach
+      The One With The Jellyfish
+      The One With The Ballroom Dancing
+      The One With Chandler In A Box
+      The One With The Free Porn
+      The One With The Invitation
+      The One With Ross's Wedding, Part 2
+      The One With The Inappropriate Sister
+      The One On The Last Night
+      The One With The Apothecary Table
+      The One That Could Have Been, Part 1
+      The One That Could Have Been, Part 2
+      The One With The Ring
+      The One With The Proposal, Part 2
+      The One With The Vows
+      The One With Monica And Chandler's Wedding, Part 1
+      The One With The Red Sweater
+      The One With Joey's Interview
+      The One Where Rachel Has A Baby, Part 2
+      The One Where No One Proposes
+      The One With Rachel's Other Sister
+      The One With The Blind Dates
+      The One With The Lottery
+      The One Where Chandler Gets Caught
+      The Last One, Part 1
+      The Last One, Part 2
+    </div>
+    
+<!-- JAVASCRIPT -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/script.js"></script>
+<!--     <script src="https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js"></script> -->
+    
+  </body> 
+</html>
+  
