@@ -7,11 +7,12 @@ function setup() {
 }
 
 function mouseClicked() {
-  var phArray = ['☆', '☀', '⌇', '⋱', '⋰'];
+  var phArray = ['☆', '☀', '⌇', '⋱', '⋰', '⁂', '∴', '⋯', '⋮', '∿', '∵', '☼', '☁', '❞', '✳'];
   var phElement = random(phArray);
   var x = random(10, 1250);
-  var y = random(150, 1400);
-
-  phSymbols = createP(phElement, 200, 100);
+  var y = random(150, 700);
+  
+  phSymbols = createElement('h1', phElement, 200, 100);
+  // phSymbols = createP(phElement, 200, 100);
   phSymbols.position(x, y);
 }
