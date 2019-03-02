@@ -5,17 +5,17 @@ function populate(character,lesson){
   lesson.innerHTML = "";
 
   if(character.value == "Phoebe"){
-    var optionArray = ["|","Phoebe 1|to do things you love even if you're not the greatest at them","Phoebe 2|that you shouldn’t give a shit what people think about you","Phoebe 3|that home is a state of mind, and you get to choose your family"];
+    var optionArray = ["|","Phoebe 1|to do things you love even if you're not the best at them","Phoebe 2|that you shouldn’t care what people think about you","Phoebe 3|that home is a state of mind, and you get to choose your family"];
   } else if(character.value == "Chandler"){
-    var optionArray = ["|","Chandler 1|that you are not defined by your job","Chandler 2|that you don't have to be great at advice, just be there for friends","Chandler 3|that your past doesn't define you"];
+    var optionArray = ["|","Chandler 1|that you are not defined by your job","Chandler 2|that you don't have to be great at advice to be a great friend","Chandler 3|that your past is part of who you are"];
   } else if(character.value == "Rachel"){
-    var optionArray = ["|","Rachel 1|that it’s okay to be a little ~extra~","Rachel 2|that it’s never too late to grow up.","Rachel 3|that if you work hard and you're confident, you can do anything"];
+    var optionArray = ["|","Rachel 1|that it’s okay to be a little ~extra~","Rachel 2|that it’s never too late to grow up","Rachel 3|that if you work hard and believe in yourself, you can do anything"];
   } else if(character.value == "Ross"){
     var optionArray = ["|","Ross 1|your relationships don't define you","Ross 2|that it’s okay to be dorky","Ross 3|that persistence pays off"];
   } else if(character.value == "Monica"){
-    var optionArray = ["|","Monica 1|that it's okay to know you’re really good at stuff","Monica 2|that your neuroses can be endearing","Monica 3|that it's never too late to change who you are"];
+    var optionArray = ["|","Monica 1|that you should know your strengths and it's okay to show it","Monica 2|to embrace the unique parts your personality","Monica 3|that you can always try to become a better version of yourself"];
   } else if(character.value == "Joey"){
-    var optionArray = ["|","Joey 1|that traditional career paths aren’t for everyone","Joey 2|to always go for what you want","Joey 3|that it's okay to be curvy and love your body"];
+    var optionArray = ["|","Joey 1|that traditional career paths aren’t for everyone","Joey 2|to always go for what you want","Joey 3|that you should always love your body"];
   } else if(character.value == "FRIENDS"){
     var optionArray = ["|","FRIENDS 1|that life is not always fair","FRIENDS 2|to never lose the kid inside","FRIENDS 3|that life is better with great friends"];
   }
